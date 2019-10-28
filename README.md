@@ -1,4 +1,4 @@
-# waa
+# Web Application Architecture (WAA)
 
 ## Content
 
