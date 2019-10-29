@@ -1,0 +1,9 @@
+INDEX VERSION 1.131
+D:\workspace\mum\waa\Lab1\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1238237721.index
+\CalculatorServlet\src
+D:\workspace\mum\waa\Lab1\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2038037380.index
+\CalculatorServlet\src
+D:\workspace\mum\waa\Lab1\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1049260713.index
+\Starbucks\src
+D:\workspace\mum\waa\Lab1\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2941711051.index
+\CalculatorServlet\src

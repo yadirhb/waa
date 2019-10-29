@@ -1,0 +1,15 @@
+INDEX VERSION 1.4+D:\workspace\mum\waa\Lab1\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+2256353856.index
+2038037380.index
+1494509930.index
+4073428194.index
+1231075381.index
+1238237721.index
+3954931677.index
+2180488607.index
+1049260713.index
+1049260713.index
+3041667446.index
+1509976591.index
+2941711051.index
+2758602688.index
