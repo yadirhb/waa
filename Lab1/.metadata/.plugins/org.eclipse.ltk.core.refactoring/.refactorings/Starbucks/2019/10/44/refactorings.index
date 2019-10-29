@@ -1,0 +1,4 @@
+1572375437769	Rename resource 'advice.jsp'
+1572376309077	Rename resource 'LoginSuccessFull.html'
+1572376426332	Move 'LoginSuccessFul.html' to 'WEB-INF'
+1572376432306	Move 'LoginSuccessFul.html' to 'WebContent'
