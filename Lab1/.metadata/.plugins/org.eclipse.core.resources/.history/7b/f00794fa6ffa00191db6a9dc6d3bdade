@@ -1,0 +1,33 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<h2>Starbuck's <c:out value = "${requestScope['roast']}"/> Roast Coffees:</h2>
+	<form action="../action/login" method="get">
+		<table>
+		<c:forEach var = "advice" items="${requestScope['advices']}" varStatus="loop">
+         Item <c:out value = "${i}"/><p>
+         <c:choose>
+			  <c:when test="${loop.index%2 == 0}">
+			    ...
+			  </c:when>
+			  <c:otherwise>
+			    ...
+			  </c:otherwise>
+			</c:choose>
+         <tr style="background-color:cyan">
+		</tr>
+      	</c:forEach>
+		
+		</table>
+		
+		<input type="submit" value="Back" />
+	</form>
+</body>
+</html>
