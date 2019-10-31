@@ -10,13 +10,12 @@
 <body>
 	<h2>
 		Starbuck's
-		<c:out value="${requestScope['roast']}" />
+		<c:out value="${roast}" />
 		Roast Coffees:
 	</h2>
-	<form action="./login" method="get">
+	<form action="./form" method="get">
 		<table>
-			<c:forEach var="advice" items="${requestScope['advices']}"
-				varStatus="loop">
+			<c:forEach var="advice" items="${advices}" varStatus="loop">
 				<tr
 					style="background-color:${(loop.index) % 2 == 0 ? 'cyan' : 'yellow'}">
 					<td><c:out value="${advice}" /></td>
