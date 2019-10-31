@@ -1,0 +1,19 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<h2>Starbuck's ${requestScope['roast']} Roast Coffees:</h2>
+	<form action="../action/login" method="get">
+		<table>
+		<tr style="background-color:cyan">
+		</tr>
+		<input type="submit" value="Back">
+		</table>
+	</form>
+</body>
+</html>
