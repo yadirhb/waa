@@ -9,6 +9,7 @@ import javax.validation.constraints.Size;
 
 import org.hibernate.validator.constraints.NotEmpty;
 import org.springframework.format.annotation.DateTimeFormat;
+import org.springframework.web.multipart.MultipartFile;
 
 
 
@@ -37,7 +38,16 @@ public class Employee  implements Serializable {
 	
 	@Valid
 	private Address address;
+	
+	@NotNull
+	private MultipartFile image;
 
+	public MultipartFile getImage() {
+		return image;
+	}
+	public void setImage(MultipartFile image) {
+		this.image = image;
+	}
 	public Address getAddress() {
 		return address;
 	}

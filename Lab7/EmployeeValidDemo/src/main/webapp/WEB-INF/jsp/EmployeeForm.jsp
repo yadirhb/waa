@@ -9,9 +9,12 @@
 <body>
 
 <div id="global">
-<form:form modelAttribute="employee" action="employee_save" method="post">
+<form:form modelAttribute="employee" action="employee_save" method="post" enctype="multipart/form-data">
     <fieldset>
         <legend>Add an employee</legend>
+        <div>
+        	<form:input id="image" path="image" type="file"/>
+        </div>
   		<p>
   		     <form:errors path="*" cssStyle="color : red;" /> 
         </p>
