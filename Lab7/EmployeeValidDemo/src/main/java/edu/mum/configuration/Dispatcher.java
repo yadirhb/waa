@@ -12,6 +12,7 @@ import org.springframework.web.multipart.commons.CommonsMultipartResolver;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
+import org.springframework.web.servlet.i18n.AcceptHeaderLocaleResolver;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
 @EnableWebMvc
@@ -37,6 +38,13 @@ public class Dispatcher extends WebMvcConfigurerAdapter {
 		InternalResourceViewResolver bean = new InternalResourceViewResolver();
 		bean.setPrefix("/WEB-INF/jsp/");
 		bean.setSuffix(".jsp");
+		return bean;
+	}
+	
+	@Bean
+	public AcceptHeaderLocaleResolver localeResolver() {
+		AcceptHeaderLocaleResolver bean = new AcceptHeaderLocaleResolver();
+		
 		return bean;
 	}
 
