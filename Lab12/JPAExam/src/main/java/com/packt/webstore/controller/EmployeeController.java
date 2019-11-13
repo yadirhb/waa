@@ -1,6 +1,5 @@
 package com.packt.webstore.controller;
 
-import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,44 +12,42 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.packt.webstore.domain.Employee;
-  
+import com.packt.webstore.service.EmployeeService;
 
- 
 @Controller
-@RequestMapping({"/employees"})
+@RequestMapping({ "/employees" })
 public class EmployeeController {
-	
- 
-	
- 	@RequestMapping(value={"","/list"})
-	public String listEmployees(Model model) {
- 
- 		
- 		return "employees";
-	}
-	
-  	@RequestMapping("/employee")
-	public String getEmployeeByNumber(Model model, @RequestParam("id") int employeeId) {
 
-  		// Replace
-  		Employee employee = new Employee();
-  		
-  		model.addAttribute("employee", employee);
+	@Autowired
+	private EmployeeService service;
+
+	@RequestMapping(value = { "", "/list" })
+	public String listEmployees(Model model) {
+		model.addAttribute("employees", service.all());
+		return "employees";
+	}
+
+	@RequestMapping("/employee")
+	public String getEmployeeByNumber(Model model, @RequestParam("id") int employeeId) {
+		model.addAttribute("employee", service.getById(employeeId));
 		return "employee";
 	}
 
-	
 	@RequestMapping(value = "/add", method = RequestMethod.GET)
 	public String addNewEmployee(@ModelAttribute("newEmployee") Employee newEmployee) {
-	   return "addEmployee";
+		return "addEmployee";
 	}
-	   
+
 	@RequestMapping(value = "/add", method = RequestMethod.POST)
-	public String processAddNewEmployee(@ModelAttribute("newEmployee") Employee employeeToBeAdded) {
- 
-		
-	   	return "redirect:/employees/list";
+	public String processAddNewEmployee(@Valid @ModelAttribute("newEmployee") Employee employeeToBeAdded,
+			BindingResult bindingResult) {
+		if (bindingResult.hasErrors()) {
+			return "addEmployee";
+		}
+
+		service.save(employeeToBeAdded);
+
+		return "redirect:/employees/list";
 	}
-	
- 
+
 }

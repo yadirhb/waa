@@ -32,6 +32,13 @@
 							<p>Age -         ${employee.age}</p>
 							<p>Title -       ${employee.title} </p>
 							<p>NUMBER -      ${employee.employeeNumber} </p>
+							<div>
+							<p><b>Address: </b></p>
+							<p>Street -      ${employee.address.street} </p>
+							<p>City -      ${employee.address.city} </p>
+							<p>State -      ${employee.address.state} </p>
+							<p>ZIP Code -      ${employee.address.zipCode} </p>
+							</div>
 							<p>
 								<!--a
 									href=" <spring:url value="/products/product?id=${product.productId}" /> "
