@@ -20,8 +20,7 @@
 		</div>
 	</section>
 	<section class="container">
-		<form:form modelAttribute="newEmployee" class="form-horizontal"
-			method="post">
+		<form:form modelAttribute="newEmployee" class="form-horizontal">
 			<fieldset>
 				<legend>Add new employee</legend>
 
