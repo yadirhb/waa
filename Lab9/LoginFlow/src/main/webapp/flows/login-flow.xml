@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flow xmlns="http://www.springframework.org/schema/webflow"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/webflow
+http://www.springframework.org/schema/webflow/spring-webflow-2.4.xsd">
+
+	<var name="login" class="edu.mum.domain.Login" />
+
+	<view-state id="displayLoginView" view="jsp/login.jsp"
+		model="login">
+		<transition on="performLogin" to="performLoginAction" />
+	</view-state>
+
+	<action-state id="performLoginAction">
+		<evaluate
+			expression="loginControllerHelper.authenticate(login)" />
+
+		<transition on="true" to="showSuccess" />
+		<transition on="false" to="showFailure" />
+
+	</action-state>
+
+	<view-state id="showSuccess" view="jsp/success.jsp"
+		model="login" />
+
+	<view-state id="showFailure" view="jsp/failure.jsp" />
+</flow>

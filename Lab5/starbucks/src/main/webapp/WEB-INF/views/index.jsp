@@ -15,16 +15,17 @@
 			<option value="dark">Dark</option>
 			<option value="medium">Medium</option>
 			<option value="light">Light</option>
-		</select> <br />
-		<br /> <input type="submit" value="Submit" disabled />
+		</select> <br /> <br /> <input type="submit" value="Submit" disabled />
 	</form>
 	<div id='advice'></div>
 	<p />
 	Login:
 	<form:form modelAttribute="user" action="./login" method="post">
-		Name: <input type="text" name="username" size="9" /><br /> Password: <input
-			type="password" name="password" size="9" /><br /> <br /> <input
-			type="submit" value="Log In" />
+		Name: <input name="username" size="9" />
+		<br /> Password: <input type="password" name="password" size="9" />
+		<br />
+		<br />
+		<input type="submit" value="Log In" />
 	</form:form>
 </body>
 </html>
